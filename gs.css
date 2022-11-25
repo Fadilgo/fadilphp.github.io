@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: montserrat;
+  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-size: 30px;
+  font-weight: 700;
+}
+.subheading {
+  font-weight: 300;
+}
+.navbar-brand {
+  font-weight: 900;
+}
+.home {
+  background-color: #3c2317;
+  height: 650px;
+  padding-top: 8rem;
+  font-family: "Roboto", sans-serif;
+}
+header,
+.navbar {
+  background-color: #3c2317;
+}
+.btn-home .btn-buy {
+  background-color: #ffcb42;
+  margin-right: 15px;
+  font-weight: 800;
+}
+.btn-home .btn-buy:hover {
+  text-decoration: underline;
+}
+.btn-home .btn-learn {
+  border: 2px solid #ffcb42;
+  color: #ffcb42;
+  font-weight: 800;
+}
+.btn-home .btn-learn:hover {
+  text-decoration: underline;
+}
+/* smenu */
+.menu {
+  margin-top: 175px;
+}
+.section-margin {
+  margin-top: 100px;
+}
+.card-menu .btn-menu {
+  border: 2px solid #3c2317;
+}
+.card-menu {
+  background-color: #3c2317;
+  color: #fff;
+}
+.btn-menu {
+  background-color: #ffd372;
+}
+.btn-menu:hover {
+  background-color: #ffd372;
+}
+.btn-menu a {
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+}
+.btn-menu a:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+  .home {
+    padding-top: 14rem;
+  }
+  .home .heading {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home .content-left {
+    padding-bottom: 40px;
+  }
+  .home .heading {
+    font-size: 46px;
+  }
+  .home .subheading {
+    font-size: 23px;
+  }
+  .home img {
+    right: 0;
+    bottom: -60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ya {
+    margin-bottom: 50px;
+  }
+}
+.overall {
+  padding-top: 250px;
+  font-family: consolas;
+  overflow: hidden;
+  min-height: 50vh;
+}
+.containerr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px 100px;
+  flex-wrap: wrap;
+}
+.containerr .box {
+  position: relative;
+  width: 240px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerr .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(#fff, #fff, #e3e3e3);
+  filter: blur(1px);
+  z-index: 1;
+}
+.containerr .box::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: -1px;
+  width: 20px;
+  height: 100%;
+  background: #9d9d9d;
+  filter: blur(1px);
+  z-index: 1;
+}
+
+.containerr .box .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+.containerr .box .shadow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(100% + 5px);
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(rgba(0, 0, 0, 0.075), transparent);
+  transform: skewX(450deg);
+}
+.containerr .box .shadow::after {
+  content: "";
+  position: absolute;
+  bottom: -200%;
+  left: calc(100% + 15px);
+  top: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(rgba(0, 0, 0, 0.075), transparent);
+  transform: skewX(450deg);
+}
+.containerr .box .kontent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#dbdae1, #a3aaba);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 15px 15px 15px rgba(0, 0, 0, 0.1), 20px 20px 20px rgba(0, 0, 0, 0.1), 50px 50px 50px rgba(0, 0, 0, 0.1), inset 3px 3px 2px #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.containerr .box .kontent .percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+.containerr .box .kontent .percent::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 20px;
+  background: #555;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.containerr .box .kontent .percent svg {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform: rotate(270deg);
+}
+.containerr .box .kontent .percent svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 3;
+  stroke: rgba(0, 0, 0, 0.05);
+  transform: translate(5px, 5px);
+}
+.containerr .box .kontent .percent svg circle:nth-child(2) {
+  stroke: #555;
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.containerr .box .kontent .percent .dot {
+  position: absolute;
+  inset: 5px;
+  z-index: 10;
+  animation: animateDot 2s linear forwards;
+}
+.containerr .box .kontent .percent .dot::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 14px;
+  height: 14px;
+  transform: translateX(-50%);
+  left: 50%;
+  background: #555;
+  border-radius: 50%;
+}
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+.number {
+  position: relative;
+  inset: 0;
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+}
+.number h2 {
+  font-size: 2.5em;
+  color: #555;
+}
+.number h2 span {
+  font-size: 1em;
+  font-weight: 300;
+}
